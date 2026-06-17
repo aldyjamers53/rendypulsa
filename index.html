@@ -33,13 +33,7 @@
         <a href="#pencarian-section" class="menu-item" onclick="filterCategory('Pulsa')"><i class="fa-solid fa-mobile-screen text-yellow"></i><span>Pulsa Indosat</span></a>
         <a href="#pencarian-section" class="menu-item" onclick="filterCategory('Pulsa')"><i class="fa-solid fa-mobile-screen text-purple"></i><span>Pulsa XL/Axis</span></a>
         <a href="#pencarian-section" class="menu-item" onclick="filterCategory('Paket Data')"><i class="fa-solid fa-globe text-blue"></i><span>Paket Data</span></a>
-        
-        <!-- SEKARANG INSTAN FILTER KE HALAMAN UTAMA (Sama seperti menu pulsa dll) -->
-        <a href="#pencarian-section" class="menu-item" onclick="filterCategory('Top Up Game')">
-            <i class="fa-solid fa-gamepad text-purple"></i>
-            <span>Top Up Game</span>
-        </a>
-        
+        <a href="#pencarian-section" class="menu-item" onclick="filterCategory('Top Up Game')"><i class="fa-solid fa-gamepad text-purple"></i><span>Top Up Game</span></a>
         <a href="#pencarian-section" class="menu-item" onclick="filterCategory('Transfer Bank')"><i class="fa-solid fa-bank text-green"></i><span>Transfer Bank</span></a>
         <a href="#daftar-harga" class="menu-item"><i class="fa-solid fa-tags text-yellow"></i><span>Daftar Harga</span></a>
         <a href="#ketentuan" class="menu-item"><i class="fa-solid fa-file-shield text-blue"></i><span>Ketentuan</span></a>
@@ -95,11 +89,30 @@
                     </select>
                 </div>
 
+                <!-- Input Nomor HP / ID Tujuan Utama (Sudah Dirapikan & Disatukan) -->
                 <div id="target-input-group" class="form-group" style="display: none;">
                     <label id="target-label" for="target-number">Nomor HP Tujuan</label>
                     <input type="number" id="target-number" placeholder="Contoh: 081234567xxx">
+                    
+                    <!-- PANDUAN UNTUK MOBILE LEGENDS -->
+                    <div id="ml-guide-text" style="display: none; margin-top: 8px; background: #ebf8ff; padding: 10px; border-radius: 6px; font-size: 12px; border-left: 4px solid #3182ce; color: #2b6cb0; line-height: 1.4;">
+                        <strong>ðŸŽ® Cara Melihat ID & Zone Mobile Legends:</strong><br>
+                        1. Buka game ML, klik ikon <strong>Profil</strong> di pojok kiri atas.<br>
+                        2. Di bawah nickname, lihat angka ID Anda.<br>
+                        3. Tulis dengan format: <strong>User ID(Zone ID)</strong>. Contoh: 88242375(2178).
+                    </div>
+
+                    <!-- PANDUAN UNTUK FREE FIRE -->
+                    <div id="ff-guide-text" style="display: none; margin-top: 8px; background: #fffaf0; padding: 10px; border-radius: 6px; font-size: 12px; border-left: 4px solid #dd6b20; color: #dd6b20; line-height: 1.4;">
+                        <strong>ðŸ”¥ Cara Melihat UID Free Fire:</strong><br>
+                        1. Buka game Free Fire, lalu klik <b>Foto Profil/Avatar Anda</b> di pojok kiri atas.<br>
+                        2. Masuk ke tab <b>Overview / Ringkasan</b>.<br>
+                        3. Temukan baris <b>ID</b> yang berisi deretan angka panjang di bawah nama karakter Anda.<br>
+                        4. Klik tombol salin (copy) dan masukkan murni angkanya saja di kolom input.
+                    </div>
                 </div>
 
+                <!-- Input Khusus Transfer Bank -->
                 <div id="bank-input-group" style="display: none; background: #f7fafc; padding: 15px; border-radius: 8px; margin-bottom: 15px; border: 1px dashed #cbd5e0;">
                     <h4 style="color: #0056b3; margin-top: 0; margin-bottom: 12px;"><i class="fa-solid fa-credit-card"></i> Informasi Rekening Tujuan</h4>
                     
