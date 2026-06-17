@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rendy Ashari Digital - Layanan PPOB Offline Aman & Terpercaya</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="hero">
+        <div class="container">
+            <div class="badge-container">
+                <span class="badge badge-yellow"><i class="fa-solid fa-fire"></i> Harga Terbaru</span>
+                <span class="badge badge-green"><i class="fa-solid fa-store"></i> Transaksi Offline</span>
+            </div>
+            <h1>RENDY ASHARI DIGITAL</h1>
+            <p class="tagline">"Layanan PPOB Offline Aman, Cepat dan Terpercaya"</p>
+            <div class="hero-buttons">
+                <a href="#order-section" class="btn btn-primary"><i class="fa-solid fa-receipt"></i> Pesan Sekarang</a>
+                <a href="https://wa.me/6281556828324" target="_blank" class="btn btn-whatsapp"><i class="fa-brands fa-whatsapp"></i> Hubungi Admin</a>
+            </div>
+        </div>
+    </header>
+
+    <nav class="quick-menu container">
+        <a href="#" class="menu-item" onclick="filterCategory('Semua')"><i class="fa-solid fa-house text-blue"></i><span>Home</span></a>
+        <a href="#pencarian-section" class="menu-item" onclick="filterCategory('Token PLN')"><i class="fa-solid fa-bolt text-blue"></i><span>Token PLN</span></a>
+        <a href="#pencarian-section" class="menu-item" onclick="filterCategory('DANA')"><i class="fa-solid fa-wallet text-green"></i><span>Saldo DANA</span></a>
+        <a href="#pencarian-section" class="menu-item" onclick="filterCategory('Pulsa')"><i class="fa-solid fa-mobile-screen text-blue"></i><span>Pulsa Tsel</span></a>
+        <a href="#pencarian-section" class="menu-item" onclick="filterCategory('Pulsa')"><i class="fa-solid fa-mobile-screen text-yellow"></i><span>Pulsa Indosat</span></a>
+        <a href="#pencarian-section" class="menu-item" onclick="filterCategory('Pulsa')"><i class="fa-solid fa-mobile-screen text-purple"></i><span>Pulsa XL/Axis</span></a>
+        <a href="#pencarian-section" class="menu-item" onclick="filterCategory('Paket Data')"><i class="fa-solid fa-globe text-blue"></i><span>Paket Data</span></a>
+        
+        <a href="https://gimang.netlify.app/" target="_blank" class="menu-item">
+            <i class="fa-solid fa-gamepad text-purple"></i>
+            <span>Top Up Game</span>
+        </a>
+        
+        <a href="#pencarian-section" class="menu-item" onclick="filterCategory('Transfer Bank')"><i class="fa-solid fa-bank text-green"></i><span>Transfer Bank</span></a>
+        <a href="#daftar-harga" class="menu-item"><i class="fa-solid fa-tags text-yellow"></i><span>Daftar Harga</span></a>
+        <a href="#ketentuan" class="menu-item"><i class="fa-solid fa-file-shield text-blue"></i><span>Ketentuan</span></a>
+        <a href="https://wa.me/6281556828324" target="_blank" class="menu-item"><i class="fa-solid fa-headset text-green"></i><span>Hubungi Admin</span></a>
+    </nav>
+
+    <main class="container">
+        <section id="pencarian-section" class="section-card">
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                <input type="text" id="search-input" placeholder="Cari produk atau layanan...">
+            </div>
+            <div class="filter-container">
+                <button class="filter-btn active" onclick="filterCategory('Semua')">Semua</button>
+                <button class="filter-btn" onclick="filterCategory('Token PLN')">Token PLN</button>
+                <button class="filter-btn" onclick="filterCategory('DANA')">DANA</button>
+                <button class="filter-btn" onclick="filterCategory('Pulsa')">Pulsa</button>
+                <button class="filter-btn" onclick="filterCategory('Paket Data')">Paket Data</button>
+                <button class="filter-btn" onclick="filterCategory('Transfer Bank')">Transfer Bank</button>
+            </div>
+        </section>
+
+        <section id="daftar-harga">
+            <h2 class="section-title"><i class="fa-solid fa-basket-shopping"></i> Pilih Produk & Layanan</h2>
+            <div id="product-grid" class="product-grid"></div>
+        </section>
+
+        <section id="order-section" class="section-card order-form-card">
+            <h2 class="section-title"><i class="fa-solid fa-file-invoice"></i> Form Pemesanan</h2>
+            <form id="ppob-form">
+                <div class="form-group">
+                    <label for="user-name">Nama Lengkap</label>
+                    <input type="text" id="user-name" placeholder="Masukkan nama Anda" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="user-phone">Nomor WhatsApp Anda</label>
+                    <input type="tel" id="user-phone" placeholder="Contoh: 08155682xxxx" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="select-service">Pilih Layanan</label>
+                    <select id="select-service" required>
+                        <option value="">-- Pilih Layanan --</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="select-nominal">Pilih Nominal / Paket</label>
+                    <select id="select-nominal" disabled required>
+                        <option value="">-- Pilih Nominal --</option>
+                    </select>
+                </div>
+
+                <div id="target-input-group" class="form-group" style="display: none;">
+                    <label id="target-label" for="target-number">Nomor HP Tujuan</label>
+                    <input type="number" id="target-number" placeholder="Contoh: 081234567xxx">
+                </div>
+
+                <div id="bank-input-group" style="display: none; background: #f7fafc; padding: 15px; border-radius: 8px; margin-bottom: 15px; border: 1px dashed #cbd5e0;">
+                    <h4 style="color: #0056b3; margin-top: 0; margin-bottom: 12px;"><i class="fa-solid fa-credit-card"></i> Informasi Rekening Tujuan</h4>
+                    
+                    <div class="form-group" style="margin-bottom: 10px;">
+                        <label for="bank-name" style="font-size: 13px; font-weight: 600; margin-bottom: 5px; display: block;">Nama Bank / E-Wallet</label>
+                        <input type="text" id="bank-name" placeholder="Contoh: BRI, BCA, Mandiri, DANA, OVO">
+                    </div>
+                    
+                    <div class="form-group" style="margin-bottom: 10px;">
+                        <label for="bank-account" style="font-size: 13px; font-weight: 600; margin-bottom: 5px; display: block;">Nomor Rekening / No. HP</label>
+                        <input type="number" id="bank-account" placeholder="Contoh: 1234567890">
+                    </div>
+                    
+                    <div class="form-group" style="margin-bottom: 0;">
+                        <label for="bank-owner" style="font-size: 13px; font-weight: 600; margin-bottom: 5px; display: block;">Nama Pemilik Rekening (Sesuai Aplikasi)</label>
+                        <input type="text" id="bank-owner" placeholder="Contoh: Ahmad Sodikin">
+                    </div>
+                </div>
+
+                <div class="price-display-box">
+                    <div class="price-row">
+                        <span>Harga Produk:</span>
+                        <strong id="price-tag">Rp 0</strong>
+                    </div>
+                    <div class="price-row total-row">
+                        <span>Total Pembayaran (di Toko):</span>
+                        <strong id="total-tag">Rp 0</strong>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-block btn-green"><i class="fa-solid fa-cart-shopping"></i> PESAN SEKARANG</button>
+            </form>
+        </section>
+
+        <section id="ketentuan" class="section-card">
+            <h2 class="section-title text-red"><i class="fa-solid fa-file-shield"></i> Ketentuan Layanan</h2>
+            <ol class="terms-list">
+                <li>Semua transaksi dilakukan secara offline.</li>
+                <li>Pelanggan wajib datang ke lokasi toko.</li>
+                <li>Pembayaran dilakukan langsung di lokasi toko (Cash).</li>
+                <li>Tidak menerima pembayaran via transfer online.</li>
+                <li>Pastikan nomor tujuan, ID pelanggan, dan data yang dimasukkan sudah benar.</li>
+                <li>Kesalahan input data sepenuhnya menjadi tanggung jawab pelanggan.</li>
+                <li>Dengan melakukan pemesanan, pelanggan dianggap menyetujui seluruh ketentuan layanan.</li>
+            </ol>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <h3>RENDY ASHARI DIGITAL</h3>
+            <p><i class="fa-regular fa-clock"></i> <strong>Jam Operasional:</strong> 06.00 - 23.45 WIB</p>
+            <p><i class="fa-brands fa-whatsapp"></i> <strong>WhatsApp:</strong> 0815-5682-8324</p>
+            <p><i class="fa-solid fa-location-dot"></i> <strong>Alamat Toko:</strong><br>Dradah Blumbang, Kedungpring, Lamongan</p>
+            <hr>
+            <p class="copy">&copy; <span id="year"></span> Rendy Ashari Digital. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <div id="confirmation-modal" class="modal-overlay">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h3><i class="fa-solid fa-triangle-exclamation"></i> PEMBERITAHUAN PENTING</h3>
+            </div>
+            <div class="modal-body">
+                <p class="alert-text">Setelah melakukan pemesanan, pelanggan wajib datang ke alamat toko dalam kurun waktu 20 menit untuk melakukan pembayaran dan proses transaksi. Apabila telat dalam waktu yang ditentukan maka transaksi di anggap tidak Sah.</p>
+                
+                <div class="info-block">
+                    <p><strong>Nama Pemilik:</strong> Damayanti</p>
+                    <p><strong>WhatsApp:</strong> 0815-5682-8324</p>
+                    <p><strong>Alamat:</strong> RT.4/RW.2, Dradah Blumbang, Dusun Sumberjo, Kedungpring, Lamongan, Jawa Timur 62272</p>
+                    <p><strong>Patokan:</strong> Lapangan</p>
+                </div>
+
+                <p class="highlight-danger">Pembayaran tidak dilakukan melalui transfer online. Semua transaksi dilakukan secara offline di tempat atau Real Time/Face To Face.</p>
+                <p class="terms-agree">Dengan melanjutkan, Anda dianggap menyetujui seluruh ketentuan layanan.</p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" id="btn-close-modal">Batal</button>
+                <button class="btn btn-green" id="btn-confirm-wa"><i class="fa-brands fa-whatsapp"></i> Lanjut ke WhatsApp</button>
+            </div>
+        </div>
+    </div>
+
+    <a href="https://wa.me/6281556828324" class="floating-btn wa-float" target="_blank" aria-label="WhatsApp Admin">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+    <button class="floating-btn scroll-top" id="scroll-to-top" aria-label="Kembali ke atas">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
