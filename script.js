@@ -289,8 +289,8 @@ selectService.addEventListener("change", (e) => {
         targetNumberInput.required = true;
     } else {
         targetInputGroup.style.display = "block";
-        targetLabel.innerText = "Nomor HP Tujuan / Akun";
-        targetNumberInput.placeholder = "Contoh: 081234567xxx";
+        targetLabel.innerText = "Nomor HP Tujuan / Akun ID";
+        targetNumberInput.placeholder = "Contoh HP:081xxx / contoh game: 129547";
         targetNumberInput.required = true;
     }
 
