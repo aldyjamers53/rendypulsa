@@ -1,5 +1,104 @@
 // DATA SERVICES & PRICING
 const PPOB_DATA = [
+// === NOMINAL KECIL / MENENGAH ===
+    { id: "ml3", category: "Top Up Game", name: "Mobile Legends 3 Diamonds", price: 5000 },       // Modal Rp1.058 -> Jual Rp5.000
+    { id: "ml5", category: "Top Up Game", name: "Mobile Legends 5 Diamonds", price: 6000 },       // Modal Rp1.468 -> Jual Rp6.000
+    { id: "ml10", category: "Top Up Game", name: "Mobile Legends 10 Diamonds", price: 7000 },     // Modal Rp2.987 -> Jual Rp7.000
+    { id: "ml12", category: "Top Up Game", name: "Mobile Legends 12 Diamonds", price: 8000 },     // Modal Rp3.438 -> Jual Rp8.000
+    { id: "ml14", category: "Top Up Game", name: "Mobile Legends 14 Diamonds", price: 9000 },     // Modal Rp4.024 -> Jual Rp9.000
+    { id: "ml18", category: "Top Up Game", name: "Mobile Legends 18 Diamonds", price: 9000 },     // Modal Rp5.003 -> Jual Rp9.000
+    { id: "ml19", category: "Top Up Game", name: "Mobile Legends 19 Diamonds", price: 10000 },    // Modal Rp5.399 -> Jual Rp10.000
+    { id: "ml28", category: "Top Up Game", name: "Mobile Legends 28 Diamonds", price: 12000 },    // Modal Rp7.680 -> Jual Rp12.000
+    { id: "ml36", category: "Top Up Game", name: "Mobile Legends 36 Diamonds", price: 14000 },    // Modal Rp9.983 -> Jual Rp14.000
+    { id: "ml44", category: "Top Up Game", name: "Mobile Legends 44 Diamonds", price: 15000 },    // Modal Rp10.918 -> Jual Rp15.000
+    { id: "ml59", category: "Top Up Game", name: "Mobile Legends 59 Diamonds", price: 19000 },    // Modal Rp14.819 -> Jual Rp19.000
+    { id: "ml74", category: "Top Up Game", name: "Mobile Legends 74 Diamonds", price: 24000 },    // Modal Rp19.284 -> Jual Rp24.000
+    { id: "ml85", category: "Top Up Game", name: "Mobile Legends 85 Diamonds", price: 26500 },    // Modal Rp21.507 -> Jual Rp26.500
+
+    // === PRODUK POPULER (WEEKLY PASS) ===
+    { id: "mlwdp", category: "Top Up Game", name: "Weekly Diamond Pass (WDP)", price: 33000 },   // Modal Rp28.687 -> Jual Rp33.000
+
+    // === NOMINAL BESAR ===
+    { id: "ml170", category: "Top Up Game", name: "Mobile Legends 170 Diamonds", price: 50000 },  // Modal Rp44.831 -> Jual Rp50.000
+    { id: "ml222", category: "Top Up Game", name: "Mobile Legends 222 Diamonds", price: 60000 },  // Modal Rp55.617 -> Jual Rp60.000
+    { id: "ml240", category: "Top Up Game", name: "Mobile Legends 240 Diamonds", price: 67000 },  // Modal Rp61.909 -> Jual Rp67.000
+    { id: "ml296", category: "Top Up Game", name: "Mobile Legends 296 Diamonds", price: 82000 },  // Modal Rp77.123 -> Jual Rp82.000
+    { id: "ml370", category: "Top Up Game", name: "Mobile Legends 370 Diamonds", price: 101000 }, // Modal Rp96.317 -> Jual Rp101.000
+    { id: "ml408", category: "Top Up Game", name: "Mobile Legends 408 Diamonds", price: 112000 }, // Modal Rp107.281 -> Jual Rp112000
+    { id: "ml568", category: "Top Up Game", name: "Mobile Legends 568 Diamonds", price: 150000 }, // Modal Rp144.823 -> Jual Rp150.000
+    { id: "ml966", category: "Top Up Game", name: "Mobile Legends 966 Diamonds", price: 250000 }, // Modal Rp244.807 -> Jual Rp250.000
+    { id: "ml875", category: "Top Up Game", name: "Mobile Legends 875 Diamonds", price: 230000 }, // Modal Rp224.934 -> Jual Rp230.000
+    { id: "ml2010", category: "Top Up Game", name: "Mobile Legends 2010 Diamonds", price: 494000 }, // Modal Rp488.498 -> Jual Rp494.000
+    { id: "ml4830", category: "Top Up Game", name: "Mobile Legends 4830 Diamonds", price: 1185000 }, // Modal Rp1.179.309 -> Jual Rp1.185.000
+    // === FREE FIRE NOMINAL KECIL / MENENGAH ===
+    { id: "ff5", category: "Top Up Game", name: "Free Fire 5 Diamonds", price: 5000 },         // Modal Rp827 -> Jual Rp5.000
+    { id: "ff12", category: "Top Up Game", name: "Free Fire 12 Diamonds", price: 6000 },       // Modal Rp1.779 -> Jual Rp6.000
+    { id: "ff25", category: "Top Up Game", name: "Free Fire 25 Diamonds", price: 8000 },       // Modal Rp4.109 -> Jual Rp8.000
+    { id: "ff50", category: "Top Up Game", name: "Free Fire 50 Diamonds", price: 10000 },      // Modal Rp6.040 -> Jual Rp10.000
+    { id: "ff53", category: "Top Up Game", name: "Free Fire 53 Diamonds", price: 11000 },      // Modal Rp6.859 -> Jual Rp11.000
+    { id: "ff64", category: "Top Up Game", name: "Free Fire 64 Diamonds", price: 13000 },      // Modal Rp8.888 -> Jual Rp13.000
+    { id: "ff70", category: "Top Up Game", name: "Free Fire 70 Diamonds", price: 13000 },      // Modal Rp8.875 -> Jual Rp13.000
+    { id: "ff100", category: "Top Up Game", name: "Free Fire 100 Diamonds", price: 16000 },    // Modal Rp12.079 -> Jual Rp16.000
+    { id: "ff127", category: "Top Up Game", name: "Free Fire 127 Diamonds", price: 21000 },    // Modal Rp16.630 -> Jual Rp21.000
+    { id: "ff140", category: "Top Up Game", name: "Free Fire 140 Diamonds", price: 22000 },    // Modal Rp17.285 -> Jual Rp22.000
+    { id: "ff210", category: "Top Up Game", name: "Free Fire 210 Diamonds", price: 31000 },    // Modal Rp26.183 -> Jual Rp31.000
+
+    // === FREE FIRE NOMINAL BESAR ===
+    { id: "ff323", category: "Top Up Game", name: "Free Fire 323 Diamonds", price: 45000 },    // Modal Rp40.649 -> Jual Rp45.000
+    { id: "ff350", category: "Top Up Game", name: "Free Fire 350 Diamonds", price: 49000 },    // Modal Rp43.988 -> Jual Rp49.000
+    { id: "ff355", category: "Top Up Game", name: "Free Fire 355 Diamonds", price: 49000 },    // Modal Rp43.988 -> Jual Rp49.000
+    { id: "ff510", category: "Top Up Game", name: "Free Fire 510 Diamonds", price: 68000 },    // Modal Rp63.688 -> Jual Rp68.000
+    { id: "ff645", category: "Top Up Game", name: "Free Fire 645 Diamonds", price: 85000 },    // Modal Rp80.188 -> Jual Rp85.000
+    { id: "ff655", category: "Top Up Game", name: "Free Fire 655 Diamonds", price: 86000 },    // Modal Rp81.788 -> Jual Rp86.000
+    { id: "ff720", category: "Top Up Game", name: "Free Fire 720 Diamonds", price: 93000 },    // Modal Rp88.688 -> Jual Rp93.000
+    { id: "ff925", category: "Top Up Game", name: "Free Fire 925 Diamonds", price: 119000 },   // Modal Rp114.788 -> Jual Rp119.000
+    { id: "ff1075", category: "Top Up Game", name: "Free Fire 1075 Diamonds", price: 137000 }, // Modal Rp132.588 -> Jual Rp137.000
+    { id: "ff1080", category: "Top Up Game", name: "Free Fire 1080 Diamonds", price: 138000 }, // Modal Rp133.388 -> Jual Rp138.000
+    { id: "ff1200", category: "Top Up Game", name: "Free Fire 1200 Diamonds", price: 153000 }, // Modal Rp148.788 -> Jual Rp153.000
+    { id: "ff1285", category: "Top Up Game", name: "Free Fire 1285 Diamonds", price: 163000 }, // Modal Rp158.688 -> Jual Rp163.000
+    { id: "ff1450", category: "Top Up Game", name: "Free Fire 1450 Diamonds", price: 182000 }, // Modal Rp177.883 -> Jual Rp182.000
+    { id: "ff1800", category: "Top Up Game", name: "Free Fire 1800 Diamonds", price: 227000 }, // Modal Rp221.999 -> Jual Rp227.000
+    { id: "ff1875", category: "Top Up Game", name: "Free Fire 1875 Diamonds", price: 236000 }, // Modal Rp231.699 -> Jual Rp236.000
+    { id: "ff1973", category: "Top Up Game", name: "Free Fire 1973 Diamonds", price: 249000 }, // Modal Rp244.946 -> Jual Rp249.000
+    { id: "ff2000", category: "Top Up Game", name: "Free Fire 2000 Diamonds", price: 252000 }, // Modal Rp247.288 -> Jual Rp252.000
+    { id: "ff2160", category: "Top Up Game", name: "Free Fire 2160 Diamonds", price: 270000 }, // Modal Rp265.899 -> Jual Rp270.000
+    { id: "ff2180", category: "Top Up Game", name: "Free Fire 2180 Diamonds", price: 271000 }, // Modal Rp266.841 -> Jual Rp271.000
+    { id: "ff2200", category: "Top Up Game", name: "Free Fire 2200 Diamonds", price: 277000 }, // Modal Rp272.230 -> Jual Rp277.000
+    { id: "ff2400", category: "Top Up Game", name: "Free Fire 2400 Diamonds", price: 301000 }, // Modal Rp296.199 -> Jual Rp301.000
+    { id: "ff3309", category: "Top Up Game", name: "Free Fire 3309 Diamonds", price: 413000 }, // Modal Rp408.099 -> Jual Rp413.000
+    { id: "ff3600", category: "Top Up Game", name: "Free Fire 3600 Diamonds", price: 448000 }, // Modal Rp443.099 -> Jual Rp448.000
+    { id: "ff3640", category: "Top Up Game", name: "Free Fire 3640 Diamonds", price: 449000 },  // Modal Rp444.736 -> Jual Rp449.000
+    // === ROBLOX SESUDAH PAJAK (CLEAN) ===
+    { id: "rb_clean_1", category: "Top Up Game", name: "1 Robux (Clean/Sesudah Pajak)", price: 5000 },      // Modal Rp140 -> Jual Rp5.000
+    { id: "rb_clean_100", category: "Top Up Game", name: "100 Robux (Clean/Sesudah Pajak)", price: 18000 },  // Modal Rp14.000 -> Jual Rp18.000
+    { id: "rb_clean_500", category: "Top Up Game", name: "500 Robux (Clean/Sesudah Pajak)", price: 75000 },  // Modal Rp70.000 -> Jual Rp75.000
+    { id: "rb_clean_1000", category: "Top Up Game", name: "1000 Robux (Clean/Sesudah Pajak)", price: 140000 }, // Modal Rp135.000 -> Jual Rp140.000
+    { id: "rb_clean_1500", category: "Top Up Game", name: "1500 Robux (Clean/Sesudah Pajak)", price: 205000 }, // Modal Rp200.000 -> Jual Rp205.000
+    { id: "rb_clean_2000", category: "Top Up Game", name: "2000 Robux (Clean/Sesudah Pajak)", price: 285000 }, // Modal Rp280.000 -> Jual Rp285.000
+    { id: "rb_clean_3000", category: "Top Up Game", name: "3000 Robux (Clean/Sesudah Pajak)", price: 430000 }, // Modal Rp425.000 -> Jual Rp430.000
+    { id: "rb_clean_4000", category: "Top Up Game", name: "4000 Robux (Clean/Sesudah Pajak)", price: 571000 }, // Modal Rp566.000 -> Jual Rp571.000
+    { id: "rb_clean_5000", category: "Top Up Game", name: "5000 Robux (Clean/Sesudah Pajak)", price: 712000 }, // Modal Rp707.000 -> Jual Rp712.000
+    { id: "rb_clean_6000", category: "Top Up Game", name: "6000 Robux (Clean/Sesudah Pajak)", price: 854000 }, // Modal Rp849.000 -> Jual Rp854.000
+    { id: "rb_clean_7000", category: "Top Up Game", name: "7000 Robux (Clean/Sesudah Pajak)", price: 995000 }, // Modal Rp990.000 -> Jual Rp995.000
+    { id: "rb_clean_8000", category: "Top Up Game", name: "8000 Robux (Clean/Sesudah Pajak)", price: 1136000 }, // Modal Rp1.131.000 -> Jual Rp1.136.000
+    { id: "rb_clean_9000", category: "Top Up Game", name: "9000 Robux (Clean/Sesudah Pajak)", price: 1237000 }, // Modal Rp1.232.100 -> Jual Rp1.237.000
+    { id: "rb_clean_10000", category: "Top Up Game", name: "10000 Robux (Clean/Sesudah Pajak)", price: 1425000 }, // Modal Rp1.420.000 -> Jual Rp1.425.000
+
+    // === ROBLOX SEBELUM PAJAK (BEFORE TAX / 70%) ===
+    { id: "rb_tax_1", category: "Top Up Game", name: "1 Robux (Before Tax/Sebelum Pajak)", price: 5000 },       // Modal Rp200 -> Jual Rp5.000
+    { id: "rb_tax_100", category: "Top Up Game", name: "100 Robux (Before Tax/Sebelum Pajak)", price: 14000 },   // Modal Rp10.000 -> Jual Rp14.000
+    { id: "rb_tax_500", category: "Top Up Game", name: "500 Robux (Before Tax/Sebelum Pajak)", price: 55000 },   // Modal Rp50.000 -> Jual Rp55.000
+    { id: "rb_tax_1000", category: "Top Up Game", name: "1000 Robux (Before Tax/Sebelum Pajak)", price: 100000 }, // Modal Rp95.000 -> Jual Rp100.000
+    { id: "rb_tax_1500", category: "Top Up Game", name: "1500 Robux (Before Tax/Sebelum Pajak)", price: 155000 }, // Modal Rp150.000 -> Jual Rp155.000
+    { id: "rb_tax_2000", category: "Top Up Game", name: "2000 Robux (Before Tax/Sebelum Pajak)", price: 205000 }, // Modal Rp200.000 -> Jual Rp205.000
+    { id: "rb_tax_3000", category: "Top Up Game", name: "3000 Robux (Before Tax/Sebelum Pajak)", price: 305000 }, // Modal Rp300.000 -> Jual Rp305.000
+    { id: "rb_tax_4000", category: "Top Up Game", name: "4000 Robux (Before Tax/Sebelum Pajak)", price: 405000 }, // Modal Rp400.000 -> Jual Rp405.000
+    { id: "rb_tax_5000", category: "Top Up Game", name: "5000 Robux (Before Tax/Sebelum Pajak)", price: 455000 }, // Modal Rp450.000 -> Jual Rp455.000
+    { id: "rb_tax_6000", category: "Top Up Game", name: "6000 Robux (Before Tax/Sebelum Pajak)", price: 683000 }, // Modal Rp678.000 -> Jual Rp683.000
+    { id: "rb_tax_7000", category: "Top Up Game", name: "7000 Robux (Before Tax/Sebelum Pajak)", price: 796000 }, // Modal Rp791.000 -> Jual Rp796.000
+    { id: "rb_tax_8000", category: "Top Up Game", name: "8000 Robux (Before Tax/Sebelum Pajak)", price: 909000 }, // Modal Rp904.000 -> Jual Rp909.000
+    { id: "rb_tax_9000", category: "Top Up Game", name: "9000 Robux (Before Tax/Sebelum Pajak)", price: 1022000 }, // Modal Rp1.017.000 -> Jual Rp1.022.000
+    { id: "rb_tax_10000", category: "Top Up Game", name: "10000 Robux (Before Tax/Sebelum Pajak)", price: 994400 }, // Modal Rp989.400 -> Jual Rp994.400
     { id: "pln20", category: "Token PLN", name: "Token PLN Rp20.000", price: 24000 },
     { id: "pln50", category: "Token PLN", name: "Token PLN Rp50.000", price: 55000 },
     { id: "pln100", category: "Token PLN", name: "Token PLN Rp100.000", price: 105000 },
