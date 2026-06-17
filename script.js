@@ -289,8 +289,8 @@ selectService.addEventListener("change", (e) => {
         targetNumberInput.required = true;
     } else {
         targetInputGroup.style.display = "block";
-        targetLabel.innerText = "Nomor HP Tujuan / Akun ID";
-        targetNumberInput.placeholder = "Contoh HP:081xxx / contoh game: 129547";
+        targetLabel.innerText = "Nomor HP Tujuan / ID Akun Game";
+        targetNumberInput.placeholder = "Contoh: 081234567xxx";
         targetNumberInput.required = true;
     }
 
@@ -329,13 +329,33 @@ selectService.addEventListener("change", (e) => {
 });
 
 // HANDLING FORM CHANGE FOR NOMINAL SELECT
-selectNominal.addEventListener("change", (e) => {
+// Ambil elemen teks panduan ML, FF, dan input target di bagian paling atas script atau sebelum event listener
+const mlGuideText = document.getElementById('ml-guide-text');
+const ffGuideText = document.getElementById('ff-guide-text');
+const selectNominal = document.getElementById('select-nominal');
+const targetInput = document.getElementById('target-number');
+
+// GABUNGKAN MENJADI SATU EVENT LISTENER SAJA
+selectNominal.addEventListener('change', function(e) {
     const prodId = e.target.value;
+    
+    // 1. Logika Reset Harga Jika Tidak Ada Produk yang Dipilih
     if (!prodId) {
-        resetPriceDisplay();
+        if (typeof resetPriceDisplay === "function") {
+            resetPriceDisplay();
+        } else {
+            priceTag.innerText = "Rp 0";
+            totalTag.innerText = "Rp 0";
+        }
+        // Sembunyikan semua panduan jika kosong
+        mlGuideText.style.display = "none";
+        ffGuideText.style.display = "none";
+        targetInput.type = "number";
+        targetInput.placeholder = "Contoh: 081234567xxx";
         return;
     }
 
+    // 2. Logika Menampilkan Harga & Biaya Admin dari PPOB_DATA
     const product = PPOB_DATA.find(item => item.id === prodId);
     if (product) {
         if (product.isAdminFee) {
@@ -345,6 +365,36 @@ selectNominal.addEventListener("change", (e) => {
             priceTag.innerText = formatRp(product.price);
             totalTag.innerText = formatRp(product.price);
         }
+    }
+
+    // 3. Logika Memunculkan Panduan ID Game Berdasarkan Teks Opsi yang Dipilih
+    const selectedText = selectNominal.options[selectNominal.selectedIndex].text;
+
+    if (selectedText.includes("Mobile Legends")) {
+        // Tampilkan panduan ML, sembunyikan panduan FF
+        mlGuideText.style.display = "block";
+        ffGuideText.style.display = "none";
+        
+        // Ubah tipe ke 'text' agar bisa ketik tanda kurung () zona ML
+        targetInput.type = "text"; 
+        targetInput.placeholder = "Contoh: 88242375(2178)";
+
+    } else if (selectedText.includes("Free Fire")) {
+        // Tampilkan panduan FF, sembunyikan panduan ML
+        ffGuideText.style.display = "block";
+        mlGuideText.style.display = "none";
+        
+        // Kembalikan ke 'number' karena UID FF hanya berisi angka murni
+        targetInput.type = "number"; 
+        targetInput.placeholder = "Contoh: 123456789";
+
+    } else {
+        // Jika pilih produk lain (Pulsa, Token, DANA, dll), sembunyikan semua panduan game
+        mlGuideText.style.display = "none";
+        ffGuideText.style.display = "none";
+        
+        targetInput.type = "number";
+        targetInput.placeholder = "Contoh: 081234567xxx";
     }
 });
 
