@@ -86,6 +86,7 @@ const PPOB_DATA = [
     { id: "dana50", category: "DANA", name: "Isi Saldo DANA Rp50.000", price: 55000 },
     { id: "dana100", category: "DANA", name: "Isi Saldo DANA Rp100.000", price: 105000 },
     { id: "dana200", category: "DANA", name: "Isi Saldo DANA Rp200.000", price: 205000 },
+    { id: "dana400", category: "DANA", name: "Isi Saldo DANA Rp400.000", price: 410000 },
     { id: "dana500", category: "DANA", name: "Isi Saldo DANA Rp500.000", price: 510000 },
 
     { id: "tsel5", category: "Pulsa", name: "Pulsa Telkomsel Rp5.000", price: 8000 },
