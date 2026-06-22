@@ -58,9 +58,17 @@
             </div>
         </section>
 
+        <!-- UBAH BAGIAN INI DI INDEX.HTML -->
         <section id="daftar-harga">
-            <h2 class="section-title"><i class="fa-solid fa-basket-shopping"></i> Pilih Produk & Layanan</h2>
-            <div id="product-grid" class="product-grid"></div>
+            <button type="button" class="collapsible-trigger" id="toggle-product-btn">
+                <span><i class="fa-solid fa-basket-shopping"></i> Lihat Semua Produk & Layanan</span>
+                <i class="fa-solid fa-chevron-down arrow-icon"></i>
+            </button>
+            
+            <!-- Grid produk dibungkus di dalam content-collapse -->
+            <div class="collapsible-content" id="product-collapse-wrapper">
+                <div id="product-grid" class="product-grid"></div>
+            </div>
         </section>
 
         <section id="order-section" class="section-card order-form-card">
