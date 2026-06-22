@@ -1,0 +1,587 @@
+// DATA SERVICES & PRICING
+const PPOB_DATA = [
+    // === FREE FIRE (MARKUP UNTUNG RP3.500) ===
+    { id: "ff5", category: "Top Up Game", name: "Free Fire 5 Diamonds", price: 4000 },         // Modal Rp500 -> Jual Rp4.000
+    { id: "ff10", category: "Top Up Game", name: "Free Fire 10 Diamonds", price: 5200 },       // Modal Rp1.700 -> Jual Rp5.200
+    { id: "ff12", category: "Top Up Game", name: "Free Fire 12 Diamonds", price: 5300 },       // Modal Rp1.800 -> Jual Rp5.300
+    { id: "ff20", category: "Top Up Game", name: "Free Fire 20 Diamonds", price: 6800 },       // Modal Rp3.300 -> Jual Rp6.800
+    { id: "ff25", category: "Top Up Game", name: "Free Fire 25 Diamonds", price: 7600 },       // Modal Rp4.100 -> Jual Rp7.600
+    { id: "ff50", category: "Top Up Game", name: "Free Fire 50 Diamonds", price: 10000 },      // Modal Rp6.500 -> Jual Rp10.000
+    { id: "ff70", category: "Top Up Game", name: "Free Fire 70 Diamonds", price: 12300 },      // Modal Rp8.800 -> Jual Rp12.300
+    { id: "ff75", category: "Top Up Game", name: "Free Fire 75 Diamonds", price: 12900 },      // Modal Rp9.400 -> Jual Rp12.900
+    { id: "ff100", category: "Top Up Game", name: "Free Fire 100 Diamonds", price: 15600 },    // Modal Rp12.100 -> Jual Rp15.600
+    { id: "ff120", category: "Top Up Game", name: "Free Fire 120 Diamonds", price: 18400 },    // Modal Rp14.900 -> Jual Rp18.400
+    { id: "ff140", category: "Top Up Game", name: "Free Fire 140 Diamonds", price: 20900 },    // Modal Rp17.400 -> Jual Rp20.900
+    { id: "ff149", category: "Top Up Game", name: "Free Fire 149 Diamonds", price: 21800 },    // Modal Rp18.300 -> Jual Rp21.800
+    { id: "ff200", category: "Top Up Game", name: "Free Fire 200 Diamonds", price: 27900 },    // Modal Rp24.400 -> Jual Rp27.900
+    { id: "ff210", category: "Top Up Game", name: "Free Fire 210 Diamonds", price: 29700 },    // Modal Rp26.200 -> Jual Rp29.700
+    { id: "ff280", category: "Top Up Game", name: "Free Fire 280 Diamonds", price: 38500 },    // Modal Rp35.000 -> Jual Rp38.500
+    { id: "ff300", category: "Top Up Game", name: "Free Fire 300 Diamonds", price: 40200 },    // Modal Rp36.700 -> Jual Rp40.200
+    { id: "ff323", category: "Top Up Game", name: "Free Fire 323 Diamonds", price: 45300 },    // Modal Rp41.800 -> Jual Rp45.300
+    { id: "ff355", category: "Top Up Game", name: "Free Fire 355 Diamonds", price: 46700 },    // Modal Rp43.200 -> Jual Rp46.700
+    { id: "ff425", category: "Top Up Game", name: "Free Fire 425 Diamonds", price: 55300 },    // Modal Rp51.800 -> Jual Rp55.300
+    { id: "ff475", category: "Top Up Game", name: "Free Fire 475 Diamonds", price: 63200 },    // Modal Rp59.700 -> Jual Rp63.200
+    { id: "ff495", category: "Top Up Game", name: "Free Fire 495 Diamonds", price: 63700 },    // Modal Rp60.200 -> Jual Rp63.700
+    { id: "ff510", category: "Top Up Game", name: "Free Fire 510 Diamonds", price: 66200 },    // Modal Rp62.700 -> Jual Rp66.200
+    { id: "ff545", category: "Top Up Game", name: "Free Fire 545 Diamonds", price: 69700 },    // Modal Rp66.200 -> Jual Rp69.700
+    { id: "ff565", category: "Top Up Game", name: "Free Fire 565 Diamonds", price: 72500 },    // Modal Rp69.000 -> Jual Rp72.500
+    { id: "ff635", category: "Top Up Game", name: "Free Fire 635 Diamonds", price: 80500 },    // Modal Rp77.000 -> Jual Rp80.500
+    { id: "ff645", category: "Top Up Game", name: "Free Fire 645 Diamonds", price: 82100 },    // Modal Rp78.600 -> Jual Rp82.100
+    // === MOBILE LEGENDS (MARKUP UNTUNG RP3.500) ===
+    { id: "ml12", category: "Top Up Game", name: "Mobile Legends 12 Diamonds", price: 6900 },     // Modal Rp3.400 -> Jual Rp6.900
+    { id: "ml19", category: "Top Up Game", name: "Mobile Legends 19 Diamonds", price: 8600 },     // Modal Rp5.100 -> Jual Rp8.600
+    { id: "ml28", category: "Top Up Game", name: "Mobile Legends 28 Diamonds", price: 11000 },    // Modal Rp7.500 -> Jual Rp11.000
+    { id: "ml44", category: "Top Up Game", name: "Mobile Legends 44 Diamonds", price: 14500 },    // Modal Rp11.000 -> Jual Rp14.500
+    { id: "ml59", category: "Top Up Game", name: "Mobile Legends 59 Diamonds", price: 17500 },    // Modal Rp14.000 -> Jual Rp17.500
+    { id: "ml85", category: "Top Up Game", name: "Mobile Legends 85 Diamonds", price: 23600 },    // Modal Rp20.100 -> Jual Rp23.600
+    { id: "ml110", category: "Top Up Game", name: "Mobile Legends 110 Diamonds", price: 31800 },  // Modal Rp28.300 -> Jual Rp31.800
+    { id: "ml170", category: "Top Up Game", name: "Mobile Legends 170 Diamonds", price: 46500 },  // Modal Rp43.000 -> Jual Rp46.500
+    { id: "ml240", category: "Top Up Game", name: "Mobile Legends 240 Diamonds", price: 65300 },  // Modal Rp61.800 -> Jual Rp65.300
+    { id: "ml277", category: "Top Up Game", name: "Mobile Legends 277 Diamonds", price: 76800 },  // Modal Rp73.300 -> Jual Rp76.800
+    { id: "ml296", category: "Top Up Game", name: "Mobile Legends 296 Diamonds", price: 79800 },  // Modal Rp76.300 -> Jual Rp79.800
+    { id: "ml355", category: "Top Up Game", name: "Mobile Legends 355 Diamonds", price: 97000 },  // Modal Rp93.500 -> Jual Rp97.000
+    { id: "ml399", category: "Top Up Game", name: "Mobile Legends 399 Diamonds", price: 107800 }, // Modal Rp104.300 -> Jual Rp107.800
+    { id: "ml408", category: "Top Up Game", name: "Mobile Legends 408 Diamonds", price: 110000 }, // Modal Rp106.500 -> Jual Rp110.000
+    { id: "ml568", category: "Top Up Game", name: "Mobile Legends 568 Diamonds", price: 150300 }, // Modal Rp146.800 -> Jual Rp150.300
+    { id: "ml706", category: "Top Up Game", name: "Mobile Legends 706 Diamonds", price: 185700 }, // Modal Rp182.200 -> Jual Rp185.700
+    // === ROBLOX SESUDAH PAJAK (CLEAN) ===
+    { id: "rb_clean_1", category: "Top Up Game", name: "1 Robux (Clean/Sesudah Pajak)", price: 5000 },      // Modal Rp140 -> Jual Rp5.000
+    { id: "rb_clean_100", category: "Top Up Game", name: "100 Robux (Clean/Sesudah Pajak)", price: 18000 },  // Modal Rp14.000 -> Jual Rp18.000
+    { id: "rb_clean_500", category: "Top Up Game", name: "500 Robux (Clean/Sesudah Pajak)", price: 75000 },  // Modal Rp70.000 -> Jual Rp75.000
+    { id: "rb_clean_1000", category: "Top Up Game", name: "1000 Robux (Clean/Sesudah Pajak)", price: 140000 }, // Modal Rp135.000 -> Jual Rp140.000
+    { id: "rb_clean_1500", category: "Top Up Game", name: "1500 Robux (Clean/Sesudah Pajak)", price: 205000 }, // Modal Rp200.000 -> Jual Rp205.000
+    { id: "rb_clean_2000", category: "Top Up Game", name: "2000 Robux (Clean/Sesudah Pajak)", price: 285000 }, // Modal Rp280.000 -> Jual Rp285.000
+    { id: "rb_clean_3000", category: "Top Up Game", name: "3000 Robux (Clean/Sesudah Pajak)", price: 430000 }, // Modal Rp425.000 -> Jual Rp430.000
+    { id: "rb_clean_4000", category: "Top Up Game", name: "4000 Robux (Clean/Sesudah Pajak)", price: 571000 }, // Modal Rp566.000 -> Jual Rp571.000
+    { id: "rb_clean_5000", category: "Top Up Game", name: "5000 Robux (Clean/Sesudah Pajak)", price: 712000 }, // Modal Rp707.000 -> Jual Rp712.000
+    { id: "rb_clean_6000", category: "Top Up Game", name: "6000 Robux (Clean/Sesudah Pajak)", price: 854000 }, // Modal Rp849.000 -> Jual Rp854.000
+    { id: "rb_clean_7000", category: "Top Up Game", name: "7000 Robux (Clean/Sesudah Pajak)", price: 995000 }, // Modal Rp990.000 -> Jual Rp995.000
+    { id: "rb_clean_8000", category: "Top Up Game", name: "8000 Robux (Clean/Sesudah Pajak)", price: 1136000 }, // Modal Rp1.131.000 -> Jual Rp1.136.000
+    { id: "rb_clean_9000", category: "Top Up Game", name: "9000 Robux (Clean/Sesudah Pajak)", price: 1237000 }, // Modal Rp1.232.100 -> Jual Rp1.237.000
+    { id: "rb_clean_10000", category: "Top Up Game", name: "10000 Robux (Clean/Sesudah Pajak)", price: 1425000 }, // Modal Rp1.420.000 -> Jual Rp1.425.000
+
+    // === ROBLOX SEBELUM PAJAK (BEFORE TAX / 70%) ===
+    { id: "rb_tax_1", category: "Top Up Game", name: "1 Robux (Before Tax/Sebelum Pajak)", price: 5000 },       // Modal Rp200 -> Jual Rp5.000
+    { id: "rb_tax_100", category: "Top Up Game", name: "100 Robux (Before Tax/Sebelum Pajak)", price: 14000 },   // Modal Rp10.000 -> Jual Rp14.000
+    { id: "rb_tax_500", category: "Top Up Game", name: "500 Robux (Before Tax/Sebelum Pajak)", price: 55000 },   // Modal Rp50.000 -> Jual Rp55.000
+    { id: "rb_tax_1000", category: "Top Up Game", name: "1000 Robux (Before Tax/Sebelum Pajak)", price: 100000 }, // Modal Rp95.000 -> Jual Rp100.000
+    { id: "rb_tax_1500", category: "Top Up Game", name: "1500 Robux (Before Tax/Sebelum Pajak)", price: 155000 }, // Modal Rp150.000 -> Jual Rp155.000
+    { id: "rb_tax_2000", category: "Top Up Game", name: "2000 Robux (Before Tax/Sebelum Pajak)", price: 205000 }, // Modal Rp200.000 -> Jual Rp205.000
+    { id: "rb_tax_3000", category: "Top Up Game", name: "3000 Robux (Before Tax/Sebelum Pajak)", price: 305000 }, // Modal Rp300.000 -> Jual Rp305.000
+    { id: "rb_tax_4000", category: "Top Up Game", name: "4000 Robux (Before Tax/Sebelum Pajak)", price: 405000 }, // Modal Rp400.000 -> Jual Rp405.000
+    { id: "rb_tax_5000", category: "Top Up Game", name: "5000 Robux (Before Tax/Sebelum Pajak)", price: 455000 }, // Modal Rp450.000 -> Jual Rp455.000
+    { id: "rb_tax_6000", category: "Top Up Game", name: "6000 Robux (Before Tax/Sebelum Pajak)", price: 683000 }, // Modal Rp678.000 -> Jual Rp683.000
+    { id: "rb_tax_7000", category: "Top Up Game", name: "7000 Robux (Before Tax/Sebelum Pajak)", price: 796000 }, // Modal Rp791.000 -> Jual Rp796.000
+    { id: "rb_tax_8000", category: "Top Up Game", name: "8000 Robux (Before Tax/Sebelum Pajak)", price: 909000 }, // Modal Rp904.000 -> Jual Rp909.000
+    { id: "rb_tax_9000", category: "Top Up Game", name: "9000 Robux (Before Tax/Sebelum Pajak)", price: 1022000 }, // Modal Rp1.017.000 -> Jual Rp1.022.000
+    { id: "rb_tax_10000", category: "Top Up Game", name: "10000 Robux (Before Tax/Sebelum Pajak)", price: 994400 }, // Modal Rp989.400 -> Jual Rp994.400
+    
+    { id: "pln20", category: "Token PLN", name: "Token PLN Rp20.000", price: 24000 },
+    { id: "pln50", category: "Token PLN", name: "Token PLN Rp50.000", price: 55000 },
+    { id: "pln100", category: "Token PLN", name: "Token PLN Rp100.000", price: 105000 },
+    { id: "pln200", category: "Token PLN", name: "Token PLN Rp200.000", price: 205000 },
+    { id: "pln500", category: "Token PLN", name: "Token PLN Rp500.000", price: 510000 },
+
+    { id: "dana20", category: "DANA", name: "Isi Saldo DANA Rp20.000", price: 24000 },
+    { id: "dana50", category: "DANA", name: "Isi Saldo DANA Rp50.000", price: 55000 },
+    { id: "dana100", category: "DANA", name: "Isi Saldo DANA Rp100.000", price: 105000 },
+    { id: "dana200", category: "DANA", name: "Isi Saldo DANA Rp200.000", price: 205000 },
+    { id: "dana400", category: "DANA", name: "Isi Saldo DANA Rp400.000", price: 410000 },
+    { id: "dana500", category: "DANA", name: "Isi Saldo DANA Rp500.000", price: 510000 },
+
+    { id: "tsel5", category: "Pulsa", name: "Pulsa Telkomsel Rp5.000", price: 8000 },
+    { id: "tsel10", category: "Pulsa", name: "Pulsa Telkomsel Rp10.000", price: 13000 },
+    { id: "tsel20", category: "Pulsa", name: "Pulsa Telkomsel Rp20.000", price: 23000 },
+    { id: "tsel50", category: "Pulsa", name: "Pulsa Telkomsel Rp50.000", price: 55000 },
+    { id: "tsel100", category: "Pulsa", name: "Pulsa Telkomsel Rp10.000", price: 105000 },
+
+    { id: "isat5", category: "Pulsa", name: "Pulsa Indosat Rp5.000", price: 8000 },
+    { id: "isat10", category: "Pulsa", name: "Pulsa Indosat Rp10.000", price: 13000 },
+    { id: "isat20", category: "Pulsa", name: "Pulsa Indosat Rp20.000", price: 23000 },
+    { id: "isat50", category: "Pulsa", name: "Pulsa Indosat Rp50.000", price: 55000 },
+    { id: "isat100", category: "Pulsa", name: "Pulsa Indosat Rp100.000", price: 105000 },
+
+    { id: "xl5", category: "Pulsa", name: "Pulsa XL / Axis Rp5.000", price: 8000 },
+    { id: "xl10", category: "Pulsa", name: "Pulsa XL / Axis Rp10.000", price: 13000 },
+    { id: "xl20", category: "Pulsa", name: "Pulsa XL / Axis Rp20.000", price: 23000 },
+    { id: "xl50", category: "Pulsa", name: "Pulsa XL / Axis Rp50.000", price: 55000 },
+    { id: "xl100", category: "Pulsa", name: "Pulsa XL / Axis Rp100.000", price: 105000 },
+
+    { id: "data1", category: "Paket Data", name: "Paket Data 1 GB", price: 13000 },
+    { id: "data2", category: "Paket Data", name: "Paket Data 2 GB", price: 18000 },
+    { id: "data3", category: "Paket Data", name: "Paket Data 3 GB", price: 23000 },
+    { id: "data5", category: "Paket Data", name: "Paket Data 5 GB", price: 33000 },
+    { id: "data10", category: "Paket Data", name: "Paket Data 10 GB", price: 55000 },
+
+    { id: "tf20", category: "Transfer Bank", name: "Transfer Bank Rp20.000", price: 5000, isAdminFee: true },
+    { id: "tf25", category: "Transfer Bank", name: "Transfer Bank Rp25.000", price: 5000, isAdminFee: true },
+    { id: "tf30", category: "Transfer Bank", name: "Transfer Bank Rp30.000", price: 5000, isAdminFee: true },
+    { id: "tf35", category: "Transfer Bank", name: "Transfer Bank Rp35.000", price: 5000, isAdminFee: true },
+    { id: "tf40", category: "Transfer Bank", name: "Transfer Bank Rp40.000", price: 5000, isAdminFee: true },
+    { id: "tf45", category: "Transfer Bank", name: "Transfer Bank Rp45.000", price: 5000, isAdminFee: true },
+    { id: "tf50", category: "Transfer Bank", name: "Transfer Bank Rp50.000", price: 5000, isAdminFee: true },
+    { id: "tf55", category: "Transfer Bank", name: "Transfer Bank Rp55.000", price: 5000, isAdminFee: true },
+    { id: "tf60", category: "Transfer Bank", name: "Transfer Bank Rp60.000", price: 5000, isAdminFee: true },
+    { id: "tf70", category: "Transfer Bank", name: "Transfer Bank Rp70.000", price: 5000, isAdminFee: true }, 
+    { id: "tf80", category: "Transfer Bank", name: "Transfer Bank Rp80.000", price: 5000, isAdminFee: true }, 
+    { id: "tf90", category: "Transfer Bank", name: "Transfer Bank Rp90.000", price: 5000, isAdminFee: true }, 
+    { id: "tf100", category: "Transfer Bank", name: "Transfer Bank Rp100.000", price: 5000, isAdminFee: true },
+    { id: "tf125", category: "Transfer Bank", name: "Transfer Bank Rp125.000", price: 5000, isAdminFee: true },
+    { id: "tf150", category: "Transfer Bank", name: "Transfer Bank Rp150.000 ", price: 5000, isAdminFee: true },
+    { id: "tf200", category: "Transfer Bank", name: "Transfer Bank Rp200.000", price: 5000, isAdminFee: true },
+    { id: "tf250", category: "Transfer Bank", name: "Transfer Bank Rp250.000", price: 5000, isAdminFee: true },
+    { id: "tf300", category: "Transfer Bank", name: "Transfer Bank Rp300.000", price: 10000, isAdminFee: true },
+    { id: "tf350", category: "Transfer Bank", name: "Transfer Bank Rp350.000", price: 10000, isAdminFee: true },
+    { id: "tf400", category: "Transfer Bank", name: "Transfer Bank Rp400.000", price: 10000, isAdminFee: true },
+    { id: "tf500", category: "Transfer Bank", name: "Transfer Bank Rp500.000", price: 15000, isAdminFee: true },
+    { id: "tf1000", category: "Transfer Bank", name: "Transfer Bank Rp1.000.000", price: 15000, isAdminFee: true }
+];
+
+const ADMIN_WA_NUMBER = "6281556828324";
+let currentFilteredData = [...PPOB_DATA];
+let selectedProductForWA = null;
+
+// DOM ELEMENTS (DISINKRONKAN 100% DENGAN INDEX.HTML)
+const targetInputGroup = document.getElementById("target-input-group");
+const targetLabel = document.getElementById("target-label");
+const targetNumberInput = document.getElementById("target-number");
+const productGrid = document.getElementById("product-grid");
+const searchInput = document.getElementById("search-input");
+const selectService = document.getElementById("select-service");
+const selectNominal = document.getElementById("select-nominal");
+const bankInputGroup = document.getElementById("bank-input-group");
+const bankNameInput = document.getElementById("bank-name");
+const bankAccountInput = document.getElementById("bank-account");
+const bankOwnerInput = document.getElementById("bank-owner");
+const priceTag = document.getElementById("price-tag");
+const totalTag = document.getElementById("total-tag");
+const ppobForm = document.getElementById("ppob-form");
+const confirmationModal = document.getElementById("confirmation-modal");
+const btnCloseModal = document.getElementById("btn-close-modal");
+const btnConfirmWa = document.getElementById("btn-confirm-wa");
+const scrollToTopBtn = document.getElementById("scroll-to-top");
+
+const mlGuideText = document.getElementById('ml-guide-text');
+const ffGuideText = document.getElementById('ff-guide-text');
+
+// ELEMEN BARU UNTUK INPUT CUSTOM NOMINAL TRANSFER BANK
+const nominalSelectGroup = document.getElementById("nominal-select-group") || (selectNominal ? selectNominal.parentElement : null);
+const customNominalGroup = document.getElementById("custom-nominal-group");
+const customNominalInput = document.getElementById("custom-nominal");
+
+// FORMAT CURRENCY
+function formatRp(number) {
+    return "Rp " + number.toLocaleString("id-ID");
+}
+
+// SISTEM HITUNG OTOMATIS BIAYA ADMIN TRANSFER BANK CUSTOM
+function hitungAdminBank(nominal) {
+    if (nominal < 300000) {
+        return 5000;
+    } else if (nominal >= 300000 && nominal <= 1000000) {
+        return 10000;
+    } else {
+        return 15000;
+    }
+}
+
+// RENDER PRICING LIST
+function renderProducts(dataToRender) {
+    if (!productGrid) return;
+    productGrid.innerHTML = "";
+    
+    if (dataToRender.length === 0) {
+        productGrid.innerHTML = `<p style="text-align:center; grid-column: 1/-1; padding: 20px; color:#a0aec0;">Produk tidak ditemukan.</p>`;
+        return;
+    }
+
+    const categories = [...new Set(dataToRender.map(item => item.category))];
+    
+    categories.forEach(cat => {
+        const header = document.createElement("div");
+        header.className = "category-group";
+        header.innerText = cat.toUpperCase();
+        productGrid.appendChild(header);
+
+        const items = dataToRender.filter(item => item.category === cat);
+        items.forEach(prod => {
+            const card = document.createElement("div");
+            card.className = "product-card";
+            
+            let priceLabel = formatRp(prod.price);
+            if(prod.isAdminFee) {
+                priceLabel = `+ Biaya ${formatRp(prod.price)}`;
+            }
+
+            card.innerHTML = `
+                <div class="prod-details">
+                    <h4>${prod.name}</h4>
+                    <p>${priceLabel}</p>
+                </div>
+                <div class="prod-action">
+                    <button onclick="directOrder('${prod.id}')">PESAN</button>
+                </div>
+            `;
+            productGrid.appendChild(card);
+        });
+    });
+}
+
+// FILTER CATEGORY CLICK
+window.filterCategory = function(categoryName) {
+    const filterBtns = document.querySelectorAll(".filter-btn");
+    filterBtns.forEach(btn => {
+        if(btn.innerText.toLowerCase() === categoryName.toLowerCase() || (categoryName === 'Semua' && btn.innerText === 'Semua')) {
+            btn.classList.add("active");
+        } else {
+            btn.classList.remove("active");
+        }
+    });
+
+    if (categoryName === "Semua") {
+        currentFilteredData = [...PPOB_DATA];
+    } else {
+        currentFilteredData = PPOB_DATA.filter(item => item.category === categoryName);
+    }
+    renderProducts(currentFilteredData);
+}
+
+// SEARCH FILTER LOGIC
+if (searchInput) {
+    searchInput.addEventListener("input", (e) => {
+        const keyword = e.target.value.toLowerCase();
+        const filtered = PPOB_DATA.filter(item => 
+            item.name.toLowerCase().includes(keyword) || 
+            item.category.toLowerCase().includes(keyword)
+        );
+        renderProducts(filtered);
+    });
+}
+
+// INITIALIZE FORM DROPDOWNS
+function initFormOptions() {
+    if (!selectService) return;
+    selectService.innerHTML = `<option value="">-- Pilih Layanan --</option>`;
+    
+    const categories = [...new Set(PPOB_DATA.map(item => item.category))];
+    categories.forEach(cat => {
+        const opt = document.createElement("option");
+        opt.value = cat;
+        opt.innerText = cat;
+        selectService.appendChild(opt);
+    });
+}
+
+// HANDLING FORM CHANGE FOR SERVICE SELECT
+if (selectService) {
+    selectService.addEventListener("change", (e) => {
+        const selectedCat = e.target.value;
+        if (selectNominal) selectNominal.innerHTML = `<option value="">-- Pilih Nominal --</option>`;
+        
+        // Reset element custom nominal jika berganti layanan
+        if (customNominalGroup) customNominalGroup.style.display = "none";
+        if (customNominalInput) { customNominalInput.required = false; customNominalInput.value = ""; }
+        if (nominalSelectGroup) nominalSelectGroup.style.display = "block";
+
+        if (!selectedCat) {
+            if (targetInputGroup) targetInputGroup.style.display = "none";
+            if (targetNumberInput) targetNumberInput.required = false;
+        } else if (selectedCat === "Transfer Bank") {
+            if (targetInputGroup) targetInputGroup.style.display = "none";
+            if (targetNumberInput) {
+                targetNumberInput.required = false;
+                targetNumberInput.value = "";
+            }
+            // Aktifkan input custom nominal ketik sendiri untuk Bank
+            if (nominalSelectGroup) nominalSelectGroup.style.display = "none";
+            if (customNominalGroup) customNominalGroup.style.display = "block";
+            if (customNominalInput) customNominalInput.required = true;
+
+        } else if (selectedCat === "Token PLN") {
+            if (targetInputGroup) targetInputGroup.style.display = "block";
+            if (targetLabel) targetLabel.innerText = "Nomor Meter / ID Pelanggan PLN";
+            if (targetNumberInput) {
+                targetNumberInput.placeholder = "Contoh: 51234567xxx";
+                targetNumberInput.required = true;
+            }
+        } else {
+            if (targetInputGroup) targetInputGroup.style.display = "block";
+            if (targetLabel) targetLabel.innerText = "Nomor HP Tujuan / ID Akun Game";
+            if (targetNumberInput) {
+                targetNumberInput.placeholder = "Contoh: 081234567xxx";
+                targetNumberInput.required = true;
+            }
+        }
+
+        if (selectedCat === "Transfer Bank") {
+            if (bankInputGroup) bankInputGroup.style.display = "block";
+            if (bankNameInput) bankNameInput.required = true;
+            if (bankAccountInput) bankAccountInput.required = true;
+            if (bankOwnerInput) bankOwnerInput.required = true;
+        } else {
+            if (bankInputGroup) bankInputGroup.style.display = "none";
+            if (bankNameInput) { bankNameInput.required = false; bankNameInput.value = ""; }
+            if (bankAccountInput) { bankAccountInput.required = false; bankAccountInput.value = ""; }
+            if (bankOwnerInput) { bankOwnerInput.required = false; bankOwnerInput.value = ""; }
+        }
+
+        if (!selectedCat) {
+            if (selectNominal) selectNominal.disabled = true;
+            resetPriceDisplay();
+            return;
+        }
+
+        // Isi data dropdown pilihan hanya jika bukan kategori Transfer Bank
+        if (selectedCat !== "Transfer Bank") {
+            const items = PPOB_DATA.filter(item => item.category === selectedCat);
+            items.forEach(item => {
+                const opt = document.createElement("option");
+                opt.value = item.id;
+                opt.innerText = item.name;
+                if (selectNominal) selectNominal.appendChild(opt);
+            });
+            if (selectNominal) selectNominal.disabled = false;
+        }
+        resetPriceDisplay();
+    });
+}
+
+// HANDLING REAL-TIME CALCULATION SAAT PELANGGAN KETIK NOMINAL BANK
+if (customNominalInput) {
+    customNominalInput.addEventListener("input", (e) => {
+        const nominalValue = parseInt(e.target.value) || 0;
+        if (nominalValue <= 0) {
+            resetPriceDisplay();
+            return;
+        }
+        const adminFee = hitungAdminBank(nominalValue);
+        const totalBayar = nominalValue + adminFee;
+
+        if (priceTag) priceTag.innerText = `Biaya Admin ${formatRp(adminFee)}`;
+        if (totalTag) totalTag.innerText = formatRp(totalBayar);
+    });
+}
+
+// HANDLING FORM CHANGE FOR NOMINAL SELECT
+if (selectNominal) {
+    selectNominal.addEventListener('change', function(e) {
+        const prodId = e.target.value;
+        
+        if (!prodId) {
+            resetPriceDisplay();
+            if (mlGuideText) mlGuideText.style.display = "none";
+            if (ffGuideText) ffGuideText.style.display = "none";
+            if (targetNumberInput) {
+                targetNumberInput.type = "number";
+                targetNumberInput.placeholder = "Contoh: 081234567xxx";
+            }
+            return;
+        }
+
+        const product = PPOB_DATA.find(item => item.id === prodId);
+        if (product) {
+            if (product.isAdminFee) {
+                if (priceTag) priceTag.innerText = `Biaya Admin ${formatRp(product.price)}`;
+                if (totalTag) totalTag.innerText = `Nominal Utama + ${formatRp(product.price)}`;
+            } else {
+                if (priceTag) priceTag.innerText = formatRp(product.price);
+                if (totalTag) totalTag.innerText = formatRp(product.price);
+            }
+        }
+
+        const selectedText = selectNominal.options[selectNominal.selectedIndex].text;
+
+        if (selectedText.includes("Mobile Legends")) {
+            if (mlGuideText) mlGuideText.style.display = "block";
+            if (ffGuideText) ffGuideText.style.display = "none";
+            if (targetNumberInput) {
+                targetNumberInput.type = "text"; 
+                targetNumberInput.placeholder = "Contoh: 88242375(2178)";
+            }
+        } else if (selectedText.includes("Free Fire")) {
+            if (mlGuideText) mlGuideText.style.display = "none";
+            if (ffGuideText) ffGuideText.style.display = "block";
+            if (targetNumberInput) {
+                targetNumberInput.type = "number"; 
+                targetNumberInput.placeholder = "Contoh: 123456789";
+            }
+        } else {
+            if (mlGuideText) mlGuideText.style.display = "none";
+            if (ffGuideText) ffGuideText.style.display = "none";
+            if (targetNumberInput) {
+                targetNumberInput.type = "number";
+                targetNumberInput.placeholder = "Contoh: 081234567xxx";
+            }
+        }
+    });
+}
+
+function resetPriceDisplay() {
+    if (priceTag) priceTag.innerText = "Rp 0";
+    if (totalTag) totalTag.innerText = "Rp 0";
+}
+
+// QUICK ORDER FROM LIST BUTTON
+window.directOrder = function(productId) {
+    const product = PPOB_DATA.find(item => item.id === productId);
+    if (!product) return;
+
+    if (selectService) {
+        selectService.value = product.category;
+        selectService.dispatchEvent(new Event('change'));
+    }
+    
+    // Jika tombol 'PESAN' diklik dari list Transfer bank statis bawaan, otomatis isikan nominalnya ke input custom
+    if (product.category === "Transfer Bank") {
+        // Ambil nominal angka murni dari string nama "Transfer Bank Rp20.000" -> 20000
+        const extractNominal = parseInt(product.name.replace(/[^0-9]/g, '')) || 0;
+        if (customNominalInput && extractNominal > 0) {
+            customNominalInput.value = extractNominal;
+            customNominalInput.dispatchEvent(new Event('input'));
+        }
+    } else {
+        if (selectNominal) {
+            selectNominal.value = product.id;
+            selectNominal.dispatchEvent(new Event('change')); 
+        }
+    }
+
+    const orderSection = document.getElementById("order-section");
+    if (orderSection) {
+        orderSection.scrollIntoView({ behavior: 'smooth' });
+    }
+};
+
+// FORM SUBMISSION PROCESS
+if (ppobForm) {
+    ppobForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        
+        const isTransferBank = (selectService && selectService.value === "Transfer Bank");
+        let namaProdukFinal = "";
+        let infoHargaFinal = "";
+
+        if (isTransferBank) {
+            const nominalValue = parseInt(customNominalInput.value) || 0;
+            const adminFee = hitungAdminBank(nominalValue);
+            const totalBayar = nominalValue + adminFee;
+
+            namaProdukFinal = `Transfer Bank ${formatRp(nominalValue)}`;
+            infoHargaFinal = `${formatRp(totalBayar)} (Sudah termasuk Admin ${formatRp(adminFee)})`;
+        } else {
+            const prodId = selectNominal ? selectNominal.value : "";
+            const selectedProduct = PPOB_DATA.find(item => item.id === prodId);
+            
+            if (!selectedProduct) return;
+            namaProdukFinal = selectedProduct.name;
+            infoHargaFinal = selectedProduct.isAdminFee ? `Harga Menyesuaikan + Admin ${formatRp(selectedProduct.price)}` : formatRp(selectedProduct.price);
+        }
+
+        selectedProductForWA = {
+            userName: document.getElementById("user-name").value,
+            userPhone: document.getElementById("user-phone").value,
+            service: selectService.value,
+            nominal: namaProdukFinal,
+            targetLabel: targetLabel ? targetLabel.innerText : "Tujuan",
+            targetNumber: targetNumberInput ? targetNumberInput.value : "",
+            bankName: bankNameInput ? bankNameInput.value : "",
+            bankAccount: bankAccountInput ? bankAccountInput.value : "",
+            bankOwner: bankOwnerInput ? bankOwnerInput.value : "",
+            price: infoHargaFinal
+        };
+
+        if (confirmationModal) {
+            confirmationModal.classList.add("active");
+        }
+    });
+}
+
+// MODAL CLOSING
+if (btnCloseModal) {
+    btnCloseModal.addEventListener("click", () => {
+        if (confirmationModal) confirmationModal.classList.remove("active");
+    });
+}
+
+// MODAL REDIRECT WHATSAPP ACTION
+if (btnConfirmWa) {
+    btnConfirmWa.addEventListener("click", () => {
+        if (!selectedProductForWA) return;
+
+        const data = selectedProductForWA;
+        
+        let waText = `Nama: ${data.userName}\n` +
+                     `Nomor WhatsApp: ${data.userPhone}\n` +
+                     `Layanan: ${data.service}\n` +
+                     `Nominal: ${data.nominal}\n`;
+                     
+        if (data.targetNumber) {
+            waText += `${data.targetLabel}: ${data.targetNumber}\n`;
+        }
+                     
+        if (data.bankName) {
+            waText += `\n--- REKENING TUJUAN ---\n` +
+                      `Bank: ${data.bankName}\n` +
+                      `No. Rekening: ${data.bankAccount}\n` +
+                      `Atas Nama: ${data.bankOwner}\n` +
+                      `-----------------------\n`;
+        }
+        
+        waText += `\nHarga: ${data.price}\n\n` +
+                  `Saya ingin melakukan pemesanan layanan PPOB di Rendy Ashari Digital.`;
+
+        const encodedText = encodeURIComponent(waText);
+        const whatsappUrl = `https://wa.me/${ADMIN_WA_NUMBER}?text=${encodedText}`;
+
+        if (confirmationModal) confirmationModal.classList.remove("active");
+        window.open(whatsappUrl, '_blank');
+    });
+}
+
+// SCROLL TO TOP SYSTEM INTERACTION
+window.addEventListener("scroll", () => {
+    if (scrollToTopBtn) {
+        if (window.scrollY > 300) {
+            scrollToTopBtn.classList.add("show");
+        } else {
+            scrollToTopBtn.classList.remove("show");
+        }
+    }
+});
+
+if (scrollToTopBtn) {
+    scrollToTopBtn.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+}
+
+// APP INITIALIZATION SETUP ON LOAD
+document.addEventListener("DOMContentLoaded", () => {
+    renderProducts(PPOB_DATA);
+    initFormOptions();
+    
+    const yearEl = document.getElementById("year");
+    if (yearEl) yearEl.innerText = new Date().getFullYear();
+
+    // FITUR CEK JAM OPERASIONAL OTOMATIS (06.00 - 23.45 WIB)
+    const sekarang = new Date();
+    const jam = sekarang.getHours();
+    const menit = sekarang.getMinutes();
+    
+    const totalMenitSekarang = (jam * 60) + menit;
+    const menitBuka = 6 * 60; 
+    const menitTutup = (23 * 60) + 45; 
+
+    if (totalMenitSekarang < menitBuka || totalMenitSekarang > menitTutup) {
+        if (ppobForm) {
+            const submitBtn = ppobForm.querySelector("button[type='submit']");
+            if (submitBtn) {
+                submitBtn.disabled = true; 
+                submitBtn.style.background = "#a0aec0"; 
+                submitBtn.style.cursor = "not-allowed";
+                submitBtn.innerHTML = `<i class="fa-solid fa-moon"></i> MAAF, TOKO SEDANG TUTUP`;
+            }
+        }
+        alert("Halo! Rendy Ashari Digital sudah tutup. Jam operasional kami adalah pukul 06.00 - 23.45 WIB. Anda tetap bisa melihat-lihat daftar harga produk kami.");
+    }
+});
