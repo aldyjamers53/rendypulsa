@@ -402,6 +402,72 @@ footer hr { border: 0; border-top: 1px solid #2d3748; margin: 15px 0; }
     transform: translateY(20px);
     transition: var(--transition);
 }
+/* ==========================================================================
+   FITUR COLLAPSIBLE DAFTAR HARGA
+   ========================================================================== */
+#daftar-harga {
+    margin-bottom: 25px;
+}
+
+.collapsible-trigger {
+    width: 100%;
+    background-color: #ffffff;
+    color: #2d3748;
+    padding: 16px 20px;
+    font-size: 16px;
+    font-weight: 700;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.collapsible-trigger:hover {
+    background-color: #f7fafc;
+    border-color: #cbd5e0;
+}
+
+.collapsible-trigger .arrow-icon {
+    transition: transform 0.3s ease;
+    color: #4a5568;
+}
+
+/* Style ketika menu sedang terbuka aktif */
+.collapsible-trigger.active {
+    background-color: #0056b3;
+    color: #ffffff;
+    border-color: #0056b3;
+    border-radius: 12px 12px 0 0; /* Membuat sudut atas melengkung saja */
+}
+
+.collapsible-trigger.active .arrow-icon {
+    transform: rotate(-180deg);
+    color: #ffffff;
+}
+
+/* Kontainer pembungkus daftar produk */
+.collapsible-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out, padding 0.3s ease;
+    background: #ffffff;
+    border: 1px solid transparent;
+    border-top: none;
+    border-radius: 0 0 12px 12px;
+    padding: 0 15px;
+}
+
+/* Ketika kontainer aktif terbuka */
+.collapsible-content.active {
+    max-height: 2000px; /* Batas tinggi maksimal saat terbuka (bisa disesuaikan) */
+    padding: 20px 15px;
+    border-color: #e2e8f0;
+    overflow-y: auto;
+}
 
 .modal-overlay.active .modal-card { transform: translateY(0); }
 
