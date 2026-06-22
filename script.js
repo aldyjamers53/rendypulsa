@@ -555,8 +555,11 @@ if (scrollToTopBtn) {
     });
 }
 
-// APP INITIALIZATION SETUP ON LOAD
+// ==========================================================================
+// APP INITIALIZATION SETUP ON LOAD & COLLAPSIBLE LOGIC
+// ==========================================================================
 document.addEventListener("DOMContentLoaded", () => {
+    // Jalankan fungsi bawaan utama
     renderProducts(PPOB_DATA);
     initFormOptions();
     
@@ -584,4 +587,44 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         alert("Halo! Rendy Ashari Digital sudah tutup. Jam operasional kami adalah pukul 06.00 - 23.45 WIB. Anda tetap bisa melihat-lihat daftar harga produk kami.");
     }
+
+    // --- LOGIKA BUKA TUTUP (COLLAPSIBLE) DAFTAR PRODUK ---
+    const toggleBtn = document.getElementById("toggle-product-btn");
+    const contentWrapper = document.getElementById("product-collapse-wrapper");
+
+    if (toggleBtn && contentWrapper) {
+        toggleBtn.addEventListener("click", function () {
+            // Bergantian menambah/menghapus class 'active'
+            this.classList.toggle("active");
+            contentWrapper.classList.toggle("active");
+
+            // Mengubah teks tombol secara dinamis
+            const textSpan = this.querySelector("span");
+            if (this.classList.contains("active")) {
+                textSpan.innerHTML = '<i class="fa-solid fa-eye-slash"></i> Sembunyikan Produk & Layanan';
+            } else {
+                textSpan.innerHTML = '<i class="fa-solid fa-basket-shopping"></i> Lihat Semua Produk & Layanan';
+            }
+        });
+    }
 });
+
+// MODIFIKASI FILTER CATEGORY:
+// Agar saat tombol filter / menu navigasi cepat di-klik, daftar produk otomatis langsung terbuka otomatis
+const originalFilterCategory = window.filterCategory;
+if (typeof originalFilterCategory === "function") {
+    window.filterCategory = function (category) {
+        // Jalankan fungsi filter bawaan asli terlebih dahulu
+        originalFilterCategory(category);
+        
+        // Paksa buka kontainer daftar produk jika user menekan menu filter
+        const toggleBtn = document.getElementById("toggle-product-btn");
+        const contentWrapper = document.getElementById("product-collapse-wrapper");
+        
+        if (toggleBtn && contentWrapper && !toggleBtn.classList.contains("active")) {
+            toggleBtn.classList.add("active");
+            contentWrapper.classList.add("active");
+            toggleBtn.querySelector("span").innerHTML = '<i class="fa-solid fa-eye-slash"></i> Sembunyikan Produk & Layanan';
+        }
+    };
+}
