@@ -83,14 +83,22 @@
                     </select>
                 </div>
 
-                <div class="form-group">
+                <!-- Dropdown Nominal Statis -->
+                <div class="form-group" id="nominal-select-group">
                     <label for="select-nominal">Pilih Nominal / Paket</label>
                     <select id="select-nominal" disabled required>
                         <option value="">-- Pilih Nominal --</option>
                     </select>
                 </div>
 
-                <!-- Input Nomor HP / ID Tujuan Utama (Sudah Dirapikan & Disatukan) -->
+                <!-- Input Khusus Ketik Manual Nominal Transfer Bank (Muncul otomatis lewat JS) -->
+                <div class="form-group" id="custom-nominal-group" style="display: none;">
+                    <label for="custom-nominal">Masukkan Nominal Transfer (Rp)</label>
+                    <input type="number" id="custom-nominal" placeholder="Contoh: 500000">
+                    <small style="color: #a0aec0; display: block; margin-top: 5px;">* Biaya Admin: < 300rb = Rp5.000 | 300rb - 1jt = Rp10.000 | > 1jt = Rp15.000</small>
+                </div>
+
+                <!-- Input Nomor HP / ID Tujuan Utama -->
                 <div id="target-input-group" class="form-group" style="display: none;">
                     <label id="target-label" for="target-number">Nomor HP Tujuan</label>
                     <input type="number" id="target-number" placeholder="Contoh: 081234567xxx">
